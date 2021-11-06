@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Edit User</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<h1>Your info: </h1>
+<br/><br/>
+Your nickname: <a th:utext="${user.nickname}"></a>
+<br/><br/>
+Your e-mail: <a th:utext="${user.email}"></a>
+<br/><br/>
+Your registration date: <a th:utext="${user.registrationDate}"></a>
+<br/><br/>
+Your role: <a th:utext="${user.roles}"></a>
+<br/><br/>
+<a th:href="@{/logout}">Logout</a>
+</body>
+</html>

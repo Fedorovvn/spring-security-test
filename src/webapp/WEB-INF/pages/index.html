@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Welcome</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<h1>Welcome admin!</h1>
+<br/><br/>
+<a th:href="@{/admin/userlist}">User list</a>
+<br/><br/>
+<a th:href="@{/user}">Your info</a>
+<br/><br/>
+<a th:href="@{/logout}">Logout</a>
+</body>
+
+</html>

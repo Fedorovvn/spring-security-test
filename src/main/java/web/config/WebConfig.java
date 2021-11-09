@@ -1,4 +1,4 @@
-package web.handler;
+package web.config;
 
 
 import org.springframework.context.ApplicationContext;
@@ -79,13 +79,10 @@ public class WebConfig implements WebMvcConfigurer {
         em.setDataSource(getDataSource());
         em.setPackagesToScan(env.getProperty("entitymanager.packages.to.scan"));
         em.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
-
         Properties props = new Properties();
         props.put("hibernate.show_sql", env.getProperty("hibernate.show_sql"));
         props.put("hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto"));
-
         em.setJpaProperties(props);
-
         return em;
     }
 

@@ -1,4 +1,4 @@
-package web.model;
+package web.dto;
 
 import java.util.Date;
 

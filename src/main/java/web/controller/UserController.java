@@ -1,14 +1,13 @@
 package web.controller;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import web.model.Role;
 import web.model.User;
-import web.model.UserForm;
+import web.dto.UserForm;
 import web.servise.UserService;
 
 import java.util.*;
@@ -23,10 +22,6 @@ public class UserController {
 
     public UserController(UserService userService) {
         this.userService = userService;
-        userService.add(new User("Karella", "or_009@mail.ru", "1", Collections.singleton(new Role("ROLE_ADMIN"))));
-        userService.add(new User("YuIIOO-", "Jupitr@yandex.ru", "2", Set.of(new Role("ROLE_ADMIN"), new Role("ROLE_USER"))));
-        userService.add(new User("Lotry=-", "toolong@gmail.com", "3", Collections.singleton(new Role("ROLE_USER"))));
-        userService.add(new User("tea_for_one", "urban@gmail.com", "4", Collections.singleton(new Role("ROLE_USER"))));
     }
 
     @RequestMapping(value = {"/admin"}, method = RequestMethod.GET)
